@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "iisExpress": {
+      "applicationUrl": "http://localhost:61742",
+      "sslPort": 44376
+    }
+  },
+  "profiles": {
+    "contacts_api": {
+      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "launchBrowser": true,
+      "launchUrl": "api/v1/contacts"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "launchBrowser": true,
+      "launchUrl": "api/v1/contacts"
+    }
+  }
+}

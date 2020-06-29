@@ -1,4 +1,7 @@
+using Contacts.Business;
 using Contacts.Database;
+using Contacts.Models;
+using Contacts.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +26,9 @@ namespace Contacts
             options.UseMySql(Configuration.GetConnectionString("DbConnection")));
 
       services.AddCors();
+
+      services.AddScoped<IContactTypeRepository<Phone>, PhoneRepository>();
+      services.AddScoped<IPhoneBusiness, PhoneBusiness>();
 
       services.AddControllers();
     }

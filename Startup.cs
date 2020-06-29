@@ -27,6 +27,9 @@ namespace Contacts
 
       services.AddCors();
 
+      services.AddScoped<IContactRepository, ContactRepository>();
+      services.AddScoped<IContactBusiness, ContactBusiness>();
+
       services.AddScoped<IContactTypeRepository<Phone>, PhoneRepository>();
       services.AddScoped<IPhoneBusiness, PhoneBusiness>();
 

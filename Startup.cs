@@ -30,6 +30,9 @@ namespace Contacts
       services.AddScoped<IContactTypeRepository<Phone>, PhoneRepository>();
       services.AddScoped<IPhoneBusiness, PhoneBusiness>();
 
+      services.AddScoped<IContactTypeRepository<Email>, EmailRepository>();
+      services.AddScoped<IEmailBusiness, EmailBusiness>();
+
       services.AddControllers();
     }
 
